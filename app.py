@@ -15,8 +15,9 @@ def search():
 
 @app.route("/home/<code>")
 def home(code):
+    # Header for API
     params = {
-        'Authorization' : 'Bearer 8lLSKb6YF7zz8L1cXAN5eSAY5tVK'
+        'Authorization' : 'Bearer 8lLSKb6YF7zz8L1cXAN5eSAY5tVK'     # Access token
     }
 
     r = requests.get(f'https://test.api.amadeus.com/v1/reference-data/locations?subType=AIRPORT,CITY&keyword={code}', headers=params)
